@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, '../dist'),
     },
     module: {
         rules: [
@@ -19,6 +19,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
+                    'style-loader',
                     MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader"
