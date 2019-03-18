@@ -1,0 +1,9 @@
+mixin info-block(img-src, title)
+    .info-block
+        .info-block__header
+            img(src=""+img-src, class="info-block__img")
+            h1(class="info-block__title")
+            span(class="info-block__line")
+        .info-block__content
+            if block
+                block

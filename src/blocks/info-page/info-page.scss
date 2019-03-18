@@ -1,0 +1,13 @@
+@import "./__inner/info-page__inner";
+@import "./__cell/info-page__cell";
+
+@media screen and (max-width: 1920px){
+    .info-page__cell{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 320px){
+    .info-page__cell{
+        width: 90%;
+    }
+}
