@@ -1,8 +1,7 @@
-mixin info-block(img-src, title)
-    .info-block(class=attributes.class)
-        .info-block__header
-            img(src=img-src, class="info-block__img")
-            h1(class="info-block__title")=title
-            span(class="info-block__line")
-        .info-block__content
-            block
+mixin info-block(options)
+    div(class=attributes.class)
+        div(class=attributes.class+"__header")
+            img(src=options.imgsrc, class=attributes.class+"__img")
+            h1(class=attributes.class+"__title")=options.title
+            span(class=attributes.class+"__line")
+        block

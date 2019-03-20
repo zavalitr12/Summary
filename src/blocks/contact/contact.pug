@@ -1,0 +1,17 @@
+include ../info-block/info-block
+include ./contact__item
+
+-
+    data={
+        address:"Main Street, City",
+        email:"contact@domain.com",
+        phone:"555-555-555",
+        website:"www,yourweb.com"
+    }
+
++info-block({imgsrc:"/path",title:"contact"})(class="contact")
+    .contact__list
+        +contact__item({name:"adderss",value:data.address})(class="contact__item")
+        +contact__item({name:"e-mail",value:data.email})(class="contact__item")
+        +contact__item({name:"phone",value:data.phone})(class="contact__item")
+        +contact__item({name:"website",value:data.website})(class="contact__item")

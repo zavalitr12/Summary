@@ -1,5 +1,5 @@
 mixin list(options)
   #{options.listTag}(class=attributes.class)
     -for(i=0;i<options.length;i++)
-      #{options.itemTag}(class=attributes.class)
+      #{options.itemTag}(class=attributes.class+"__item")
         block
