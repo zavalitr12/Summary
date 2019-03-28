@@ -4,8 +4,10 @@ mixin logo()
             logo: attributes.mod.logo? attributes.mod.logo : "",
             logo__ring: attributes.mod.logo__ring? attributes.mod.logo__ring : "",
             logo__img: attributes.mod.logo__img? attributes.mod.logo__img : ""
-        }
-        var mod = pugHelper(mod);
+        };
+        
+        mod = pugHelper(mod);
+
     div(class=`logo${mod.logo}`)
         div(class=`logo__ring${mod.logo__ring}`)
         if(img)
