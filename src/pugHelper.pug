@@ -1,8 +1,12 @@
 -
-  const modHelper = m=>{
-    if(m)
-      for(key in m){
-        m[key] = m[key]===""? "":" "+m[key].split(" ").map(item => {return m[key]=`${key}_${item}`}).join(" ");
-    }
-    return m;
-  };
+  const modHelper = mod =>{ 
+    for(key in mod){ 
+      mod[key] = mod[key]===""? "" :
+      " "+mod[key]
+      .split(" ")
+      .map(item => {
+        return mod[key]=`${key}_${item}`})
+      .join(" "); 
+    } 
+    return mod;
+  }
