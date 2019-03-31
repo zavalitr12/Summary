@@ -1,0 +1,33 @@
+mixin b({tag="",mod={},attr={}})
+  -
+    var className = attributes.class;
+    var modifier = "";
+    for(key in mod){
+    if(className==key)
+      modifier = mod[key]===""? "" :
+      " "+mod[key]
+      .split(" ")
+      .map(item => {
+      return `${key}_${item}`})
+      .join(" "); 
+    }
+
+  #{tag}(class=`${attributes.class}${modifier===""? "" : modifier}`)&attributes(attr)
+    block
+
+mixin e({tag="",mod={},attr={}})
+  -
+    var className = attributes.class;
+    var modifier = "";
+    for(key in mod){
+    if(className==key)
+      modifier = mod[key]===""? "" :
+        " "+mod[key]
+        .split(" ")
+        .map(item => {
+        return `${key}_${item}`})
+        .join(" "); 
+    }
+
+  #{tag}(class=`${className}${modifier===""? "" : modifier}`)&attributes(attr)
+    block

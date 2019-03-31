@@ -1,0 +1,18 @@
+mixin contact()
+    -
+        var creds = {
+            "ADDRESS":attributes.creds.address? attributes.creds.address : "-",
+            "E-MAIL":attributes.creds.email? attributes.creds.email : "-",
+            "PHONE":attributes.creds.phone? attributes.creds.phone : "-",
+            "WEBSITE":attributes.creds.website? attributes.creds.website : "-"
+        };
+
+        var mod = {
+            contact:attributes.mod.contact? attributes.mod.contact : "",
+            
+        };
+
+    div(class=`contact${mod.contact}`)
+        +head(img="contact",title="contact",mod={})
+        each value, name in creds
+            +contact__contact-info(value,name,mod={})

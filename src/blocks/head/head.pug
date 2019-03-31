@@ -1,0 +1,6 @@
+
+mixin head({title="",imgName="",mod={}})
+    +b({tag:"div"}).head
+        +logo({imgName,mod})
+        +e({tag:"h1",mod}).head__title=title
+        +e({tag:"div",mod}).head__line

@@ -1,0 +1,14 @@
+mixin profile()
+    -
+        var mod ={
+            profile:attributes.mod.profile? attributes.mod.profile : "",
+            profile:attributes.mod.profile__text? attributes.mod.profile__text : ""
+        };
+
+        var text = attributes.text? attributes.text : "";
+
+        mod = modHelper(mod);
+
+    div(class=`profile${mod.profile}`)
+        +head(img="profile",title="profile",mod={})
+        p(class=`profile__text${mod.profile__text}`)=text
